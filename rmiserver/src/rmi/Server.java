@@ -1,6 +1,7 @@
 package rmi;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.Collection;
 import java.util.List;
 
@@ -10,9 +11,18 @@ import rmi_base.Resultado;
 import rmi_base.Turma;
 import servidor.Procedures;
 
-public class Server implements EPRMI{
+public class Server extends UnicastRemoteObject implements EPRMI {
 	
-	public Server() {}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+
+
+	public Server(int port) throws RemoteException {
+		super(port);
+	}
 	
 
 
