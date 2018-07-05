@@ -13,7 +13,7 @@ public class Main {
         
         try {
             Server obj = new Server();
-            EPRMI stub = (EPRMI) UnicastRemoteObject.exportObject(obj, 0);
+            EPRMI stub = (EPRMI) UnicastRemoteObject.exportObject(obj, 50000);
 
             // Bind the remote object's stub in the registry
             Registry registry = LocateRegistry.getRegistry();
