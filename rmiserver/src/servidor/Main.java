@@ -2,10 +2,8 @@ package servidor;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.rmi.server.UnicastRemoteObject;
 
 import rmi.Server;
-import rmi_base.EPRMI;
 
 public class Main {
 	
